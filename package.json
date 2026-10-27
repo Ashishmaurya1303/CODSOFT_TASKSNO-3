@@ -6,17 +6,28 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "seed": "node prisma/seed.js",
+    "db:push": "npx prisma db push --schema=prisma/schema.sqlite.prisma",
+    "db:push:postgres": "npx prisma db push --schema=prisma/schema.prisma",
+    "db:generate": "npx prisma generate --schema=prisma/schema.sqlite.prisma",
+    "db:generate:postgres": "npx prisma generate --schema=prisma/schema.prisma"
   },
   "dependencies": {
+    "@prisma/client": "^6.19.3",
+    "bcryptjs": "^3.0.3",
+    "jsonwebtoken": "^9.0.3",
+    "lucide-react": "^1.61.0",
     "next": "16.4.3",
     "react": "19.3.0",
-    "react-dom": "19.3.0"
+    "react-dom": "19.3.0",
+    "recharts": "^3.10.1"
   },
   "devDependencies": {
     "@tailwindcss/turbopack": "^4",
     "eslint": "^9",
     "eslint-config-next": "16.4.3",
+    "prisma": "^6.19.3",
     "tailwindcss": "^4"
   }
 }
